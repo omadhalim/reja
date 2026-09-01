@@ -75,7 +75,7 @@ console.log(countLetter("a",
 //         resolve(list[5]);
 
 //       },5000);
-//      });
+//      });888O
   
 //   setTimeout(function () {
 //     return list[5];
