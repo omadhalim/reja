@@ -1,3 +1,28 @@
+
+function countDigits(str) {
+  const soni = str.match(/\d/g);
+  
+  return matches ? matches.length : 0;
+}
+
+
+console.log(countDigits("ad2a54y79wet0s8j7f65fgb9")); 
+console.log(countDigits("Assalomu Aleykum"));             
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // Task-A 
 
 function countLetter (letter, word) {
