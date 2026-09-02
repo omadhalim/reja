@@ -29,15 +29,47 @@ app.set("view engine","ejs");
 
 // 4: Routing code
 app.post("/create-item",(req,res) => {
+  console.log("user entered /create");
   console.log(req.body);
-  res.json({test: "success"});
+  const new_reja = req.body.reja;
+  db.collection("plans").insertOne({reja: new_reja}, (err, data) => {
+    if (err) {
+      console.log(err);
+      res.end("something went wrong");
+     } else {
+      res.end("successfully added");
+     }
+  });
+  
+
 });
-app.get("/",function (req,res ) {
-  res.render("reja");
+app.get("/", (req, res) => {
+  // Baza (MongoDB) yoki massivdan kelayotgan ma'lumot o'zgaruvchisi
+  db.collection("plans").find().toArray((err, data) => {
+    if (err) console.log(err);
+    else {
+      res.render("reja", { items: data }); // <-- EJS'ga 'items' nomi bilan uzatish!
+    }
+  });
 });
 
 app.get('/author', (req,res) => {
   res.render("author", { user: user});
 });
+
+app.get("/", function (req, res)   {
+  console.log("user entered /");
+  db.collection("plans")
+  .find()
+  .toArray((err,data) => {
+    if (err) {
+      console.log(err);
+      res.end("something went wrong");
+    } else {
+      
+      res.render("reja", { items:data});
+    }
+    });
+  });
 
 module.exports = app;
