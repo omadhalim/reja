@@ -1,6 +1,6 @@
 
 function countDigits(str) {
-  const soni = str.match(/\d/g);
+  const matches = str.match(/\d/g);
   
   return matches ? matches.length : 0;
 }
@@ -23,21 +23,21 @@ console.log(countDigits("Assalomu Aleykum"));
 
 
 
-// Task-A 
+// // Task-A 
 
-function countLetter (letter, word) {
-  let count = 0;
-  for (let a = 0; a <word.length; a++) {
-    if (word[a] === letter) {
-      count++;
-    }
-  }
-  return count;
-}
+// function countLetter (letter, word) {
+//   let count = 0;
+//   for (let a = 0; a <word.length; a++) {
+//     if (word[a] === letter) {
+//       count++;
+//     }
+//   }
+//   return count;
+// }
 
-console.log(countLetter("a",
-  "alibaba"
-));
+// console.log(countLetter("a",
+//   "alibaba"
+// ));
 
 
 
