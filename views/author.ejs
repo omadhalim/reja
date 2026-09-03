@@ -1,141 +1,353 @@
+<!-- author.ejs -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/main.css">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-  <title>Portfolio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="/main.css">
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+
+<title>Portfolio</title>
 </head>
+
 <body>
-   <div>
-    <div class="frame">
-      <div class="main_frame">
-      
-        <div class="left_frame">
-          <div class="left_1">
-            <div class="left_1-1">
-              <img
-              src="/images/profile.png" 
-              width="156px" 
-              height="142px" 
-              alt=""
-               />
-            </div>
-            <div class="left_1-2"><%=user.name%></div> 
-            <div class="left_1-3"><%=user.profession%></div>
-            <div class="left-icons">
-              <a class="link_href" href="">
-                <div class="icon">
-              <img src="icon/Vector-1.svg" class="icon-1" />
-            </div>
-            </a>
-            <a class="link_href" href="">
-                <div class="icon">
-              <img src="icon/Vector-2.svg" class="icon-1" />
-            </div>
-            </a>
-            <a class="link_href" href="">
-                <div class="icon">
-              <img src="icon/Vector-3.svg" class="icon-1" />
-            </div>
-            </a>
-            <a class="link_href" href="">
-                <div class="icon">
-              <img src="icon/Vector-4.svg" class="icon-1" />
-            </div>
-            </a>
-            <a class="link_href" href="">
-                <div class="icon">
-              <img src="icon/Vector-5.svg" class="icon-1" />
-            </div>
-            </a>
-            <a class="link_href" href="">
-                <div class="icon">
-              <img src="icon/Vector-6.svg" class="icon-1" /> 
-            </div>
-            </a>
-          </div>
-          <div class="marginer"></div>
-          <div class="left_2">
-            <div class="info-container">
-            <div class="left_2-info-item">
-              <span class="label">Age:</span>
-              <span class="value">24</span>
+<% const author = user || {}; %>
 
-            </div>
-            <div class="left_2-info-item">
-              <span class="label">Residance</span>
-              <span class="value">BD</span>
-            </div>
-            <div class="left_2-info-item">
-              <span class="label">Freelance:</span>
-              <span class="value available">Available</span>
-            </div>
-            <div class="left_2-info-item">
-              <span class="label">Address:</span>
-              <span class="value">Dhaka,Bangladesh</span>
+<div class="frame">
+<div class="main_frame">
 
-            </div>
-            </div>
-            
-          </div>
-          <div class="marginer"></div>
-          <div class="left_3">
-            <div class="languages-section">
-          <h3>Languages</h3>
+<!-- ========== CHAP TARAF ========== -->
+<div class="left_frame">
 
-
-  <div class="skill-item">
-    <div class="skill-info">
-      <span>Bangla</span>
-      <span>100%</span>
-    </div>
-    <div class="progress-bar">
-      <div class="progress" style="width: 100%;"></div>
-    </div>
-  </div>
-
-  
-  <div class="skill-item">
-    <div class="skill-info">
-      <span>English</span>
-      <span>80%</span>
-    </div>
-    <div class="progress-bar">
-      <div class="progress" style="width: 80%;"></div>
-    </div>
-  </div>
-
-  
-  <div class="skill-item">
-    <div class="skill-info">
-      <span>Spanish</span>
-      <span>60%</span>
-    </div>
-    <div class="progress-bar">
-      <div class="progress" style="width: 60%;"></div>
-    </div>
-  </div>
+<div class="left_1">
+<div class="left_1-1">
+<img src="/images/profile.png"
+width="156px"
+height="142px"
+alt="Profile"/>
 </div>
-          </div>  
-          <div class="marginer"></div>
-          <div class="left_4"></div>
-          <div class="marginer"></div>
-          <div class="left_5"></div>
-          <div class="marginer"></div>
-          
-        </div>
-        <div class="midd_frame">
-          <div></div>
-        </div>
-        <div class="right_frame"></div>    
-      </div>
 
-    </div>
-   </div>  
+<div class="left_1-2"><%= author.name || "Your Name" %></div>
+<div class="left_1-3"><%= author.profession || "Web Developer" %></div>
+
+<div class="left_icons">
+
+<a class="link_href" href="#">
+<div class="icon">
+<img src="/author/icon/Facebook.png"
+class="icon-1"
+alt="Facebook">
+</div>
+</a>
+
+<a class="link_href" href="#">
+<div class="icon">
+<img src="/author/icon/Instagram.png"
+class="icon-1"
+alt="Instagram">
+</div>
+</a>
+
+<a class="link_href" href="#">
+<div class="icon">
+<img src="/author/icon/Linkeding.png"
+class="icon-1"
+alt="LinkedIn">
+</div>
+</a>
+
+<a class="link_href" href="#">
+<div class="icon">
+<img src="/author/icon/Twitter.png"
+class="icon-1"
+alt="Twitter"
+onerror="this.style.display='none'">
+</div>
+</a>
+
+<a class="link_href" href="#">
+<div class="icon">
+<img src="/author/icon/Dribbble.png"
+class="icon-1"
+alt="Dribbble">
+</div>
+</a>
+
+</div>
+</div>
+
+<div class="marginer"></div>
+
+<!-- Age, Residence, Freelance, Address -->
+<div class="left_2">
+
+<div class="info_row">
+<span class="info_label">Age:</span>
+<span class="info_value">24</span>
+</div>
+
+<div class="info_row">
+<span class="info_label">Residence:</span>
+<span class="info_value">BD</span>
+</div>
+
+<div class="info_row">
+<span class="info_label">Freelance:</span>
+<span class="info_value info_green">Available</span>
+</div>
+
+<div class="info_row">
+<span class="info_label">Address:</span>
+<span class="info_value">Dhaka,Bangladesh</span>
+</div>
+
+</div>
+
+<div class="marginer"></div>
+
+<!-- Languages -->
+<div class="left_3">
+
+<div class="section_title">Languages</div>
+
+<div class="lang_row">
+<span class="lang_name">Bangla</span>
+<span class="lang_percent">100%</span>
+</div>
+<div class="bar_bg">
+<div class="bar_fill" style="width: 100%;"></div>
+</div>
+
+<div class="lang_row">
+<span class="lang_name">English</span>
+<span class="lang_percent">80%</span>
+</div>
+<div class="bar_bg">
+<div class="bar_fill" style="width: 80%;"></div>
+</div>
+
+<div class="lang_row">
+<span class="lang_name">Spanish</span>
+<span class="lang_percent">60%</span>
+</div>
+<div class="bar_bg">
+<div class="bar_fill" style="width: 60%;"></div>
+</div>
+
+</div>
+
+<div class="marginer"></div>
+
+<!-- Skills -->
+<div class="left_4">
+
+<div class="section_title">Skills</div>
+
+<div class="lang_row">
+<span class="lang_name">Html</span>
+<span class="lang_percent">90%</span>
+</div>
+<div class="bar_bg">
+<div class="bar_fill" style="width: 90%;"></div>
+</div>
+
+<div class="lang_row">
+<span class="lang_name">CSS</span>
+<span class="lang_percent">85%</span>
+</div>
+<div class="bar_bg">
+<div class="bar_fill" style="width: 85%;"></div>
+</div>
+
+<div class="lang_row">
+<span class="lang_name">Js</span>
+<span class="lang_percent">80%</span>
+</div>
+<div class="bar_bg">
+<div class="bar_fill" style="width: 80%;"></div>
+</div>
+
+<div class="lang_row">
+<span class="lang_name">PHP</span>
+<span class="lang_percent">75%</span>
+</div>
+<div class="bar_bg">
+<div class="bar_fill" style="width: 75%;"></div>
+</div>
+
+<div class="lang_row">
+<span class="lang_name">WordPress</span>
+<span class="lang_percent">85%</span>
+</div>
+<div class="bar_bg">
+<div class="bar_fill" style="width: 85%;"></div>
+</div>
+
+</div>
+
+<div class="marginer"></div>
+
+<!-- Extra Skills -->
+<div class="left_5">
+
+<div class="section_title">Extra Skills</div>
+
+<div class="extra_row">
+<img src="/author/btn_icon/Icons.png"
+class="extra_icon"
+alt=""/>
+<span>Bootstrap, Materialize</span>
+</div>
+
+<div class="extra_row">
+<img src="/author/btn_icon/Icons.png"
+class="extra_icon"
+alt="">
+<span>Stylus, Sass, Less</span>
+</div>
+
+<div class="extra_row">
+<img src="/author/btn_icon/Icons.png"
+class="extra_icon"
+alt="">
+<span>Gulp, Webpack, Grunt</span>
+</div>
+
+<div class="extra_row">
+<img src="/author/btn_icon/Icons.png"
+class="extra_icon"
+alt="">
+<span>GIT Knowledge</span>
+</div>
+
+</div>
+
+<div class="marginer"></div>
+</div>
+
+<!-- ========== O'RTA TARAF ========== -->
+<div class="midd_frame">
+
+<div class="midd_top">
+
+<div class="midd_top-left">
+<h1>Doctor neurologists <br> in OHSU Hospital</h1>
+
+<p>
+Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing
+Elit. Et, Volutpat Feugiat Placerat Lobortis. Natoque
+Rutrum Semper Sed Suspendisse Nunc Lectus.
+</p>
+
+<button class="hire_btn">HIRE ME &rarr;</button>
+</div>
+
+<div class="midd_top-right">
+<img src="/images/doctor.png"
+alt="Profile"/>
+</div>
+
+</div>
+
+<!-- My Services -->
+<div class="midd_bottom">
+
+<h2>My Services</h2>
+
+<p>
+Amet Minim Mollit Non Deserunt Ullamco Est Sit Aliqua Dolor
+Do Amet Sint. Velit Officia Consequat Duis Enim Velit Mollit.
+Lorem Ipsum
+</p>
+
+<div class="services_grid">
+
+<div class="service_card">
+<img src="/author/btn_icon/Icons_coding.png"
+alt="Web Development">
+<h3>Web Development</h3>
+<p>Blog, E-Commerce</p>
+</div>
+
+<div class="service_card">
+<img src="/author/btn_icon/Icons_illustration.png"
+alt="UI/UX Design"
+onerror="this.src='/author/btn_icon/Icons_illustration.png'">
+<h3>UI/UX Design</h3>
+<p>Mobile App, Website Design</p>
+</div>
+
+<div class="service_card">
+<img src="/author/btn_icon/Icons_Microphone (1).png"
+alt="Sound Design"
+onerror="this.src='/author/btn_icon/Icons_Microphone (1).png'">
+<h3>Sound Design</h3>
+<p>Voice Over, Beat Making</p>
+</div>
+
+<div class="service_card">
+<img src="/author/btn_icon/Icons_game-development (1).png"
+alt="Game Design"
+onerror="this.src='/author/btn_icon/Icons_game-development (1).png'">
+<h3>Game Design</h3>
+<p>Character Design, Props &amp; Objects</p>
+</div>
+
+<div class="service_card">
+<img src="/author/btn_icon/Icons_Photographer (1).png"
+alt="Photography"
+onerror="this.src='/author/btn_icon/Icons_Photographer (1).png'">
+<h3>Photography</h3>
+<p>Portrait, Product Photography</p>
+</div>
+
+<div class="service_card">
+<h3>Advertising</h3>
+<p>Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit.</p>
+<a href="#" class="order_link">ORDER NOW &gt;</a>
+</div>
+
+</div>
+</div>
+
+</div>
+
+<!-- ======== O'NG TARAF ======== -->
+<div class="right_frame">
+
+<div class="right_icon right_icon-active">
+<img src="/author/icon/Home.png" alt="Home">
+</div>
+
+<div class="right_icon">
+<img src="/author/icon/Service.png" alt="Service">
+</div>
+
+<div class="right_icon">
+<img src="/author/icon/Cv.png" alt="CV">
+</div>
+
+<div class="right_icon">
+<img src="/author/icon/Portfolio.png" alt="Portfolio">
+</div>
+
+<div class="right_icon">
+<img src="/author/icon/Blog.png" alt="Blog">
+</div>
+
+<div class="right_icon">
+<img src="/author/icon/Contact.png" alt="Contact">
+</div>
+
+</div>
+
+</div>
+</div>
 
 </body>
-
 </html>
