@@ -1,55 +1,70 @@
-// Task-C
- class Shop {
+// Task-D
 
-  constructor(non, lagmon, cola) {
-    this.non = non;
-    this.lagmon = lagmon;
-    this.cola = cola;
-  }
+function checkContent(a,b) {
+  const first = 
+  a.split("").sort().join("");
+  const second =
+  b.split("").sort().join("");
 
-  qoldiq() {
-    let vaqt = new Date().toLocaleTimeString([], {
-      hour: "2-digit",
-      minute: "2-digit"
-    });
-
-    console.log(
-      `Hozir ${vaqt}da ${this.non}ta non, ${this.lagmon}ta lag'mon va ${this.cola}ta cola mavjud`
-    );
-  }
-
-  sotish(mahsulot, soni) {
-    this[mahsulot] -= soni;
-
-    let vaqt = new Date().toLocaleTimeString([], {
-      hour: "2-digit",
-      minute: "2-digit"
-    });
-
-    console.log(`${vaqt}da ${soni}ta ${mahsulot} sotildi`);
-  }
-
-  qabul(mahsulot, soni) {
-    this[mahsulot] += soni;
-
-    let vaqt = new Date().toLocaleTimeString([], {
-      hour: "2-digit",
-      minute: "2-digit"
-    });
-
-    console.log(`${vaqt}da ${soni}ta ${mahsulot} qabul qilindi`);
-  }
+  return first === second;
 }
 
-const shop = new Shop(4, 5, 2);
+console.log(checkContent("mitgroup", "gmtiprou"));
 
-shop.qoldiq();
 
-shop.sotish("non", 3);
 
-shop.qabul("cola", 4);
+// Task-C
+//  class Shop {
 
-shop.qoldiq();
+//   constructor(non, lagmon, cola) {
+//     this.non = non;
+//     this.lagmon = lagmon;
+//     this.cola = cola;
+//   }
+
+//   qoldiq() {
+//     let vaqt = new Date().toLocaleTimeString([], {
+//       hour: "2-digit",
+//       minute: "2-digit"
+//     });
+
+//     console.log(
+//       `Hozir ${vaqt}da ${this.non}ta non, ${this.lagmon}ta lag'mon va ${this.cola}ta cola mavjud`
+//     );
+//   }
+
+//   sotish(mahsulot, soni) {
+//     this[mahsulot] -= soni;
+
+//     let vaqt = new Date().toLocaleTimeString([], {
+//       hour: "2-digit",
+//       minute: "2-digit"
+//     });
+
+//     console.log(`${vaqt}da ${soni}ta ${mahsulot} sotildi`);
+//   }
+
+//   qabul(mahsulot, soni) {
+//     this[mahsulot] += soni;
+
+//     let vaqt = new Date().toLocaleTimeString([], {
+//       hour: "2-digit",
+//       minute: "2-digit"
+//     });
+
+//     console.log(`${vaqt}da ${soni}ta ${mahsulot} qabul qilindi`);
+//   }
+// }
+
+// const shop = new Shop(4, 5, 2);
+
+// shop.qoldiq();
+
+// shop.sotish("non", 3);
+
+// shop.qabul("cola", 4);
+
+// shop.qoldiq();
 
 
 
