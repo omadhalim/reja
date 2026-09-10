@@ -1,15 +1,28 @@
-// Task-D
+// Task-E
 
-function checkContent(a,b) {
-  const first = 
-  a.split("").sort().join("");
-  const second =
-  b.split("").sort().join("");
-
-  return first === second;
+function getReverse(car) {
+  let teskari = car.split("").reverse().join("");
+  return teskari;
 }
 
-console.log(checkContent("mitgroup", "gmtiprou"));
+console.log(getReverse("damas"));
+
+
+
+
+
+// Task-D
+
+// function checkContent(a,b) {
+//   const first = 
+//   a.split("").sort().join("");
+//   const second =
+//   b.split("").sort().join("");
+
+//   return first === second;
+// }
+
+// console.log(checkContent("mitgroup", "gmtiprou"));
 
 
 
