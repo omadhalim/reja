@@ -1,11 +1,33 @@
-// Task-E
+//Task- F
 
-function getReverse(car) {
-  let teskari = car.split("").reverse().join("");
-  return teskari;
+function findDoublers(str) {
+
+  for (let i = 0; i < str.length; i++) {
+
+    for (let j = i + 1; j < str.length; j++) {
+
+      if (str[i] === str[j]) {
+        return true;
+      }
+
+    }
+
+  }
+
+  return false;
 }
 
-console.log(getReverse("damas"));
+console.log(findDoublers("hello")); // true
+console.log(findDoublers("salom"));   // false
+
+// Task-E
+
+// function getReverse(car) {
+//   let teskari = car.split("").reverse().join("");
+//   return teskari;
+// }
+
+// console.log(getReverse("damas"));
 
 
 
