@@ -1,24 +1,48 @@
-//Task- F
+// Task - G
+function getHighestIndex(arr) {
+let highest = arr[0];
+let highestIndex = 0;
 
-function findDoublers(str) {
-
-  for (let i = 0; i < str.length; i++) {
-
-    for (let j = i + 1; j < str.length; j++) {
-
-      if (str[i] === str[j]) {
-        return true;
-      }
-
-    }
+for (let i = 0; i< arr.length; i++) {
+  if (arr[i] > highest) {
+    highest = arr[i];
+    highestIndex = i;
 
   }
-
-  return false;
+ }
+  return highestIndex;
 }
 
-console.log(findDoublers("hello")); // true
-console.log(findDoublers("salom"));   // false
+console.log(getHighestIndex([5,21,12,21,8]));
+
+
+
+
+
+
+
+
+//Task- F
+
+// function findDoublers(str) {
+
+//   for (let i = 0; i < str.length; i++) {
+
+//     for (let j = i + 1; j < str.length; j++) {
+
+//       if (str[i] === str[j]) {
+//         return true;
+//       }
+
+//     }
+
+//   }
+
+//   return false;
+// }
+
+// console.log(findDoublers("hello")); // true
+// console.log(findDoublers("salom"));   // false
 
 // Task-E
 
