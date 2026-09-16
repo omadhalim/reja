@@ -21,8 +21,8 @@ connectionString,
       console.log(client);
       const app = require("./app");
       const server = http.createServer(app); 
-let PORT = 3000;
-server.listen(PORT, function () {
+const PORT = process.env.PORT || 7012;
+server.listen(PORT, "0.0.0.0", function () {
   console.log(
     `The server is running successfully on port: ${PORT}, http://localhost:${PORT}`
   );
