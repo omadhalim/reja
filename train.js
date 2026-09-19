@@ -1,19 +1,38 @@
-// Task - G
-function getHighestIndex(arr) {
-let highest = arr[0];
-let highestIndex = 0;
+// Task - K
 
-for (let i = 0; i< arr.length; i++) {
-  if (arr[i] > highest) {
-    highest = arr[i];
-    highestIndex = i;
+function countVowels(str) {
+  let count = 0;
 
+  for (let i = 0; i < str.length; i++) {
+    if ("aeiou".includes(str[i].toLowerCase())) {
+      count++;
+    }
   }
- }
-  return highestIndex;
+
+  return count;
 }
 
-console.log(getHighestIndex([5,21,12,21,8]));
+console.log(countVowels("salomhammaga"));
+
+
+
+
+// Task - G
+// function getHighestIndex(arr) {
+// let highest = arr[0];
+// let highestIndex = 0;
+
+// for (let i = 0; i< arr.length; i++) {
+//   if (arr[i] > highest) {
+//     highest = arr[i];
+//     highestIndex = i;
+
+//   }
+//  }
+//   return highestIndex;
+// }
+
+// console.log(getHighestIndex([5,21,12,21,8]));
 
 
 
